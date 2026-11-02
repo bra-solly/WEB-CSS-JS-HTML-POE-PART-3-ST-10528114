@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thunder Brothers Car Wash</title>
+  <meta name="description" content="Thunder Brothers Car Wash in Rondebosch, Cape Town. Fast 30-minute eco-friendly washes from R120. Book online today.">
+  <meta name="keywords" content="car wash Cape Town, car wash Rondebosch, eco-friendly car wash, car detailing, Thunder Brothers">
+  <meta name="author" content="Thunder Brothers Car Wash">
+  <meta property="og:title" content="Thunder Brothers Car Wash">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #1a3a5c;
+      --gold: #f5a623;
+      --gray: #333333;
+      --bg: #ffffff;
+      --light-bg: #f7f9fc;
+      --border: #e1e6ec;
+      --shadow: 0 4px 18px rgba(26, 58, 92, 0.08);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      color: var(--gray);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--blue);
+    }
+
+    h1 { font-size: 36px; }
+    h2 { font-size: 28px; margin-bottom: 15px; }
+    h3 { font-size: 20px; margin-bottom: 10px; }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: var(--gold);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--blue);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+      border-radius: 6px;
+      background: #fff;
+      padding: 3px;
+    }
+
+    .brand h1 {
+      color: #fff;
+      font-size: 22px;
+      margin: 0;
+    }
+
+    .accent {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #fff;
+      padding: 8px 12px;
+      font-weight: 600;
+      font-size: 15px;
+      border-radius: 5px;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+    }
+
+    .nav-links a.btn-book {
+      background: var(--gold);
+      color: var(--blue);
+      border-radius: 30px;
+      padding: 10px 20px;
+    }
+
+    .nav-links a.btn-book:hover {
+      background: #e0941a;
+      color: var(--blue);
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .tint {
+      background: var(--light-bg);
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    section h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--gold);
+      margin: 8px auto 0;
+      border-radius: 2px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 15px 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 26px;
+      margin-bottom: 8px;
+    }
+
+    ul li::before {
+      content: '⚡';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(26,58,92,0.85), rgba(26,58,92,0.7)), url('https://images.unsplash.com/photo-1601366223995-12a5e6f2f5b6?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .hero h2 {
+      color: #fff;
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 640px;
+      margin: 0 auto 25px;
+    }
+
+    .hero .btn-book {
+      display: inline-block;
+      font-size: 16px;
+      background: var(--gold);
+      color: var(--blue);
+      font-weight: 700;
+      padding: 12px 25px;
+      border-radius: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 25px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 65px;
+      height: 65px;
+      margin: 0 auto 12px;
+    }
+
+    .card h3 {
+      color: var(--blue);
+    }
+
+    .card p {
+      flex: 1;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .card a.btn-book {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--blue);
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 30px;
+      margin-top: auto;
+    }
+
+    .card a.btn-book:hover {
+      background: #e0941a;
+    }
+
+    .team {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .team li {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .team li::before {
+      display: none;
+    }
+
+    .team li strong {
+      color: var(--blue);
+    }
+
+    .team li small {
+      display: block;
+      color: #777;
+      margin-top: 3px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .info-block {
+      margin-bottom: 18px;
+    }
+
+    .info-block strong {
+      color: var(--blue);
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .map iframe {
+      width: 100%;
+      border: 0;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      min-height: 250px;
+    }
+
+    form {
+      background: #fff;
+      border: 1px solid var(--border);
+      padding: 25px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    form label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 4px;
+      color: var(--blue);
+      font-size: 14px;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #cdd5dd;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 15px;
+      margin-bottom: 15px;
+      background: #fff;
+    }
+
+    form input:focus, form select:focus, form textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(245,166,35,0.2);
+    }
+
+    form input[type=submit] {
+      background: var(--blue);
+      color: #fff;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+      width: auto;
+      padding: 12px 30px;
+      border-radius: 30px;
+    }
+
+    form input[type=submit]:hover {
+      background: #142c45;
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    footer {
+      background: var(--blue);
+      color: #cdd9e5;
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+
+    .social a {
+      width: 38px;
+      height: 38px;
+      line-height: 38px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .social a:hover {
+      background: var(--gold);
+      color: var(--blue);
+    }
+
+    footer p {
+      font-size: 14px;
+      color: #9fb1c6;
+    }
+
+    .fab {
+      position: fixed;
+      right: 15px;
+      bottom: 15px;
+      background: var(--gold);
+      color: var(--blue);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      padding: 12px 20px;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+      display: none;
+      z-index: 200;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 28px; }
+      h2 { font-size: 24px; }
+      .hero h2 { font-size: 30px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .field-row { grid-template-columns: 1fr; }
+      nav { justify-content: center; text-align: center; }
+      .nav-links a { font-size: 14px; padding: 6px 10px; }
+      .fab { display: block; }
+    }
+
+    @media (max-width: 480px) {
+      .brand img { display: none; }
+      section { padding: 40px 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="brand">
+        <img src="Thunder logo.png" alt="Thunder Brothers logo">
+        <h1>Thunder <span class="accent">Brothers</span> Car Wash</h1>
+      </div>
+      <div class="nav-links">
+        <a href="#home">Home</a> |
+        <a href="#services">Services</a> |
+        <a href="#about">About</a> |
+        <a href="#contact">Contact</a> |
+        <a href="#booking" class="btn-book">Book Now</a>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>Make Your Car Look Brand New</h2>
+    <p>Welcome to Thunder Brothers Car Wash. We make your car look brand new. Fast 30-minute service, eco-friendly products, and affordable prices.</p>
+    <a href="#booking" class="btn-book">⚡ Book Your Wash Now</a>
+  </section>
+
+  <section id="services" class="tint">
+    <h2>Our Wash Packages</h2>
+    <div class="container cards">
+      <div class="card">
+        <img src="Thunder presents.png" alt="Basic Wash">
+        <h3>Basic Wash - R120</h3>
+        <p>Exterior wash, rinse, and dry. A quick refresh for your daily driver.</p>
+        <a href="#booking" class="btn-book">Book Basic</a>
+      </div>
+      <div class="card">
+        <img src="Thunder presents.png" alt="Standard Wash">
+        <h3>Standard Wash - R200</h3>
+        <p>Exterior wash plus interior vacuum and window cleaning.</p>
+        <a href="#booking" class="btn-book">Book Standard</a>
+      </div>
+      <div class="card">
+        <img src="Thunder presents.png" alt="Premium Wash">
+        <h3>Premium Wash - R450</h3>
+        <p>Full detail inside and out, wax coating, and tire shine.</p>
+        <a href="#booking" class="btn-book">Book Premium</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <div class="container">
+      <p style="text-align:center; max-width:720px; margin:0 auto 30px;">
+        Serving the community since 2015. Our mission is quality car washing at fair prices, powered by a team you can trust.
+      </p>
+      <h3 style="text-align:center;">Our Team</h3>
+      <ul class="team">
+        <li><strong>Birkett Stewart McHendrie</strong><small>Majority Shareholder (Institutional Owner)</small></li>
+        <li><strong>Jacques Russouw</strong><small>Corporate Board Director / Shareholder Principal</small></li>
+        <li><strong>Henta</strong><small>Operations &amp; Human Resources Manager</small></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="tint">
+    <h2>Contact Us</h2>
+    <div class="container contact-grid">
+      <div>
+        <div class="info-block">
+          <strong>Address</strong>
+          <p>Cube Workspace, 183 Albion Springs, Rondebosch, Cape Town</p>
+        </div>
+        <div class="info-block">
+          <strong>Phone</strong>
+          <p><a href="tel:+27832570119">(+27) 83 257 0119</a></p>
+        </div>
+        <div class="info-block">
+          <strong>Email</strong>
+          <p><a href="mailto:Thunder@wash.com">Thunder@wash.com</a></p>
+        </div>
+        <div class="info-block">
+          <strong>Hours</strong>
+          <p>Mon-Fri: 8AM - 6PM<br>Saturday: 9AM - 5PM<br>Sunday: Closed</p>
+        </div>
+        <div class="map">
+          <iframe src="https://www.google.com/maps?q=183+Albion+Springs+Rondebosch+Cape+Town&output=embed" loading="lazy" height="300"></iframe>
+        </div>
+      </div>
+      <div>
+        <h3>Message Us</h3>
+        <form action="#" method="POST">
+          <div class="field-row">
+            <div>
+              <label for="cName">Name</label>
+              <input id="cName" type="text" required>
+            </div>
+            <div>
+              <label for="cEmail">Email</label>
+              <input id="cEmail" type="email" required>
+            </div>
+          </div>
+          <label for="cMsg">Message</label>
+          <textarea id="cMsg" rows="4" required></textarea>
+          <input type="submit" value="Send Message">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking">
+    <h2>Book Your Wash</h2>
+    <div class="container" style="max-width: 680px;">
+      <form action="#" method="POST">
+        <strong>Your Details</strong>
+        <hr>
+        <div class="field-row">
+          <div><label>First Name</label><input type="text" id="bookingFname" required></div>
+          <div><label>Last Name</label><input type="text" id="bookingLname" required></div>
+        </div>
+        <label>Phone</label>
+        <input type="tel" id="bookingPhone" required>
+
+        <strong>Vehicle Info</strong>
+        <hr>
+        <div class="field-row">
+          <div><label>Car Make</label><input type="text" id="bookingMake" placeholder="e.g. Toyota" required></div>
+          <div><label>Car Model</label><input type="text" id="bookingModel" placeholder="e.g. Camry" required></div>
+        </div>
+
+        <strong>Appointment</strong>
+        <hr>
+        <label>Service</label>
+        <select id="bookingService" required>
+          <option value="">Choose one...</option>
+          <option>Basic Wash - R120</option>
+          <option>Standard Wash - R200</option>
+          <option>Premium Wash - R450</option>
+        </select>
+
+        <div class="field-row">
+          <div><label>Date</label><input type="date" id="bookingDate" required></div>
+          <div>
+            <label>Time</label>
+            <select id="bookingTime" required>
+              <option value="">Choose time...</option>
+              <option>8:00 AM</option><option>9:00 AM</option>
+              <option>10:00 AM</option><option>11:00 AM</option>
+              <option>12:00 PM</option><option>1:00 PM</option>
+              <option>2:00 PM</option><option>3:00 PM</option>
+              <option>4:00 PM</option><option>5:00 PM</option>
+            </select>
+          </div>
+        </div>
+        <input type="submit" value="Confirm Booking">
+      </form>
+    </div>
+  </section>
+
+  <a href="#booking" class="fab">⚡ Book Now</a>
+
+  <footer>
+    <div class="social">
+      <a href="https://instagram.com/thunderbrotherswash" aria-label="Instagram">IG</a>
+      <a href="https://facebook.com/thunderbrotherswash" aria-label="Facebook">FB</a>
+      <a href="https://twitter.com/thunderwash" aria-label="Twitter">TW</a>
+      <a href="https://wa.me/27832570119" aria-label="WhatsApp">WA</a>
+    </div>
+    <p>&copy; 2021 Thunder Brothers Car Wash. All rights reserved.</p>
+    <p style="margin-top:6px;">Cube Workspace, 183 Albion Springs, Rondebosch, Cape Town • (+27) 83 257 0119</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
